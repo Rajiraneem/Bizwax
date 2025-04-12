@@ -25,7 +25,7 @@ Curated by Mission Means Consulting, this program is your opportunity to break f
           </div>
           {/* Card 2 */}
           <div className="">
-            <a href="https://www.google.co.in/maps/place/Apollo+dimora+staff+accomadation/@11.2476268,75.8390046,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba65b0ce5fbec9f:0x6e3720c161c29afe!8m2!3d11.2476268!4d75.8415795!16s%2Fg%2F11sw74mfff?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"><img src={card2} alt=""  className='w-[300px]'/></a>
+            <a href="https://maps.app.goo.gl/Kk21CS9ybzj3qamW6  "><img src={card2} alt=""  className='w-[300px]'/></a>
           </div>
 
           {/* Card 3 */}
