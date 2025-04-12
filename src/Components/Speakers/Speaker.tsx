@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import dropdown from "../../assets/chevron-down.png";
 import frame1 from "../../assets/Frame 1.png";
 import frame2 from "../../assets/Frame 2.png";

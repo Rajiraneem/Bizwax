@@ -8,7 +8,7 @@ import Footer from '../Components/Footer/Footer';
 import { useParams } from 'react-router-dom';
 
 const Mainpage = () => {
-  const { name } = useParams(); // Get the dynamic name from URL
+  const { name = "Guest" } = useParams(); // Get the dynamic name from URL
 
   return (
     <Fragment>
