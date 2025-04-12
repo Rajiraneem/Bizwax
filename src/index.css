@@ -1,0 +1,76 @@
+@import "tailwindcss";
+/* tracking-widest */
+@keyframes borderAnimation2 {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.animated-border {
+    position: relative;
+    z-index: 0;
+    border-radius: 9999px; /* Full rounded */
+    overflow: hidden;
+}
+
+.animated-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(270deg, #facc15, #ffff, #facc15, #ffff);
+    background-size: 600% 600%;
+    animation: borderAnimation 15s ease-in-out infinite; /* Slower and smoother animation */
+    border-radius: 9999px;
+    z-index: -1;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+@keyframes rotateDown {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotateUp {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.rotate-down {
+  animation: rotateDown 0.5s ease forwards;
+}
+
+.rotate-up {
+  animation: rotateUp 0.5s ease forwards;
+}
+
+@keyframes float {
+  0%, 100% {
+     transform: translateY(0);
+  }
+  50% {
+     transform: translateY(-5px);
+  }
+}
+
+.floating {
+  animation: float 1.5s ease-in-out infinite;
+}
