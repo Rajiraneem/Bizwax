@@ -1,7 +1,6 @@
-
-import card1 from "../../assets/Card1.png";
-import card2 from "../../assets/Card2.png";
-import card3 from "../../assets/card3.png"
+import card1 from "../../assets/Card1.webp";
+import card2 from "../../assets/Card2.webp";
+import card3 from "../../assets/card3.webp"
 
 const About = () => {
   return (
@@ -21,7 +20,7 @@ Curated by Mission Means Consulting, this program is your opportunity to break f
         <div className="grid grid-rows-3 gap-4">
           {/* Card 1 */}
           <div className="">
-            <img src={card1} alt=""  className='w-[300px]'/>
+            <img src={card1} loading='lazy' alt=""  className='w-[300px]'/>
           </div>
           {/* Card 2 */}
           <div className="">
@@ -30,7 +29,7 @@ Curated by Mission Means Consulting, this program is your opportunity to break f
 
           {/* Card 3 */}
           <div className="">
-            <img src={card3} alt=""  className='w-[300px]'/>
+            <img src={card3} loading='lazy' alt=""  className='w-[300px]'/>
           </div>
         </div>
       </div>

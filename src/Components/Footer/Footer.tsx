@@ -1,6 +1,6 @@
-import insta from "../../assets/ri_instagram-fill.png"
-import facebook from "../../assets/ic_outline-facebook.png"
-import linkedin from "../../assets/mdi_linkedin.png"
+import insta from "../../assets/ri_instagram-fill.webp"
+import facebook from "../../assets/ic_outline-facebook.webp"
+import linkedin from "../../assets/mdi_linkedin.webp"
 const Footer = () => {
     return (
         <section className='bg-white'>
@@ -11,9 +11,9 @@ const Footer = () => {
                     <h3 className='font-[poppins] text-[13px] font-semibold'>966-592336275</h3>
                 </div>
                 <div className="flex overflow-hidden mt-[58px] justify-evenly ">
-                    <a href="https://www.instagram.com/missionmeansprojects/"> <img src={insta} alt="" className=" w-[35px] h-[35px]" /></a>
-                    <a href="https://www.linkedin.com/company/mission-means-consulting-service/"><img src={facebook} alt="" className=" w-[35px] h-[35px]" /></a>
-                    <a href="https://www.facebook.com/missionmeans"><img src={linkedin} alt="" className=" w-[35px] h-[35px]" /></a>
+                    <a href="https://www.instagram.com/missionmeansprojects/"> <img src={insta} loading='lazy' alt="" className=" w-[35px] h-[35px]" /></a>
+                    <a href="https://www.linkedin.com/company/mission-means-consulting-service/"><img src={facebook} loading='lazy' alt="" className=" w-[35px] h-[35px]" /></a>
+                    <a href="https://www.facebook.com/missionmeans"><img src={linkedin} loading='lazy' alt="" className=" w-[35px] h-[35px]" /></a>
                 </div>
             </div>
             <div className="text-center mt-2.5 mb-3">

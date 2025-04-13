@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import dropdown from "../../assets/chevron-down.png";
-import frame1 from "../../assets/Frame 1.png";
-import frame2 from "../../assets/Frame 2.png";
-import frame3 from "../../assets/Frame 3.png";
-import session from "../../assets/SESSION.png";
+import { useState } from "react";
+import dropdown from "../../assets/chevron-down.webp";
+import frame1 from "../../assets/Frame 1.webp";
+import frame2 from "../../assets/Frame 2.webp";
+import frame3 from "../../assets/Frame 3.webp";
+import session from "../../assets/SESSION.webp";
 
 const speakers = [
    {
@@ -70,10 +70,10 @@ const Speaker = () => {
          </div>
 
          <div className="grid grid-rows-3 gap-6 mt-6">
-            {speakers.map((speaker) => (
+            {speakers.map((speaker,index) => (
                <div key={speaker.id} className="text-center mb-6">
                   <div className="flex justify-center items-center">
-                     <img src={speaker.image} alt="" className="w-[350px]" />
+                     <img src={speaker.image} loading={index === 0 ? 'eager' : 'lazy'} alt="" className="w-[350px]" />
                   </div>
 
                   <h1
@@ -91,6 +91,7 @@ const Speaker = () => {
                   >
                      <img
                         src={session}
+                        loading={index === 0 ? 'eager' : 'lazy'}
                         alt="Session"
                         className="w-[100px] rounded-tl-[25px]"
                      />
@@ -123,6 +124,7 @@ const Speaker = () => {
                            <span>{expanded === speaker.id ? "Show Less" : "Show More"}</span>
                            <img
                               src={dropdown}
+                              loading={index === 0 ? 'eager' : 'lazy'}
                               alt="Dropdown Icon"
                               className={`w-8 h-8 transition-transform duration-300 ${expanded === speaker.id ? "rotate-180" : "rotate-0"} floating`}
                            />

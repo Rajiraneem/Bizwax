@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    ports:
+      - "5200:3000"
+    environment:
+      NODE_ENV: production
+    # Optionally, if you are using volumes for development, uncomment:
+    # volumes:
+    #   - .:/app

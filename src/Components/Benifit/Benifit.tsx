@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Benifit = () => {
   const benefits = [
     "Learn 10 practical frameworks to secure business growth even during crises",
