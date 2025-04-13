@@ -6,23 +6,21 @@ import frame3 from "../../assets/Frame 3.webp";
 import session from "../../assets/SESSION.webp";
 
 const speakers = [
+  
    {
       id: 1,
-      name: "Umer Abdussalam",
-      image: frame1,
-      sessionTitle: "AI Ecosystem in Business Organizations",
-      description: "Tech Futurist | AI Ecosystem Consultant | CEO of Olaph.ai",
-     
-      more: "AI is not the future—it’s the present advantage. In this session, Umer Abdussalam will walk you through how AI can be integrated into every layer of your company, from IT audits to decision-making workflows, with real-world examples of how it improves efficiency and profitability",
+      name: "Lt Gen PM Hariz (Retd)",
+      image: frame3,
+      sessionTitle: " War Strategies to Tackle Corporate Crises",
+      description: " Leadership Trainer | Strategic Advisor | Former GOC-in-C Southern Command",
+      more: "What if your leadership team could think like a military command center in a warzone? Lt Gen Hariz brings his 39 years of military strategy and leadership experience into the business world. This session teaches you how to lead with calm, clarity, and control—especially in crisis.",
       keytakeways: [
-         " Understanding AI-readiness through IT audits",
-         " Report-based AI integration: how it works",
-         "Operational & managerial gains from AI adoption",
-         " Building a sustainable, future-proof AI ecosystem",
-         " War Strategies to Tackle Corporate Crises",
+         "Build systems to predict and neutralize threats",
+         "Lead with clarity under extreme pressure",
+         " Make sharp decisions when it matters most",
+         "   Instill resilience and loyalty across teams",
       ]
    },
-
    {
       id: 2,
       name: "Tiny Philip",
@@ -36,23 +34,27 @@ const speakers = [
          "Spot hidden vulnerabilities early",
          "Secure long-term competitive advantage",
          "Convert crises into growth opportunities",
-         "AI Ecosystem in Business Organizations",
+         
       ]
    },
    {
       id: 3,
-      name: "Lt Gen PM Hariz (Retd)",
-      image: frame3,
-      sessionTitle: " War Strategies to Tackle Corporate Crises",
-      description: " Leadership Trainer | Strategic Advisor | Former GOC-in-C Southern Command",
-      more: "What if your leadership team could think like a military command center in a warzone? Lt Gen Hariz brings his 39 years of military strategy and leadership experience into the business world. This session teaches you how to lead with calm, clarity, and control—especially in crisis.",
+      name: "Umer Abdussalam",
+      image: frame1,
+      sessionTitle: "AI Ecosystem in Business Organizations",
+      description: "Tech Futurist | AI Ecosystem Consultant | CEO of Olaph.ai",
+     
+      more: "AI is not the future—it’s the present advantage. In this session, Umer Abdussalam will walk you through how AI can be integrated into every layer of your company, from IT audits to decision-making workflows, with real-world examples of how it improves efficiency and profitability",
       keytakeways: [
-         "Build systems to predict and neutralize threats",
-         "Lead with clarity under extreme pressure",
-         " Make sharp decisions when it matters most",
-         "   Instill resilience and loyalty across teams",
+         " Understanding AI-readiness through IT audits",
+         " Report-based AI integration: how it works",
+         "Operational & managerial gains from AI adoption",
+         " Building a sustainable, future-proof AI ecosystem",
+        
       ]
    },
+
+  
 ];
 
 const Speaker = () => {
@@ -63,7 +65,7 @@ const Speaker = () => {
    };
 
    return (
-      <section className="flex flex-col justify-center items-center mt-5 ">
+      <section id="speaker" className="flex flex-col justify-center items-center mt-5 ">
          <div className="mt-4" style={{ fontFamily: "ImpactCustom" }}>
             <h1 className="text-[#204866] text-[45px]">
                   Speakers</h1>
@@ -136,17 +138,7 @@ const Speaker = () => {
             ))}
          </div>
 
-         <div className="flex justify-center items-center mt-8">
-            <a
-               href="https://app.ticketforevents.com/3-giant-strategists/registration"
-               target="_blank"
-               rel="noopener noreferrer"
-            >
-               <button className="px-10 py-4 text-white rounded-[25px] bg-[#204967] hover:bg-[#1a2f44] transition-all">
-                  Book your Ticket
-               </button>
-            </a>
-         </div>
+        
       </section>
    );
 };

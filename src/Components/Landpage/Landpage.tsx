@@ -1,4 +1,4 @@
-import React, { useEffect, memo } from 'react';
+import React, { useEffect, memo, useCallback } from 'react';
 import hero from '../../assets/heroimage .webp';
 import bluerectanglebg from "../../assets/Bluerecatnglebg.webp";
 import yellowbar from "../../assets/yellowbar.webp";
@@ -17,6 +17,16 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
       img.src = src;
     });
   }, []);
+
+  const scrollToSection = useCallback((id:string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  },[]);
 
   return (
     <main className="bg-white w-full overflow-hidden">
@@ -78,26 +88,32 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
             Welcome To 3 Giant Strategists Meet
           </p>
 
-          {/* Call-to-Action Button with Dropdown Icon */}
-          <div className="flex flex-col items-center mt-2.5">
-            {/* Button */}
-            <a
-              href="https://app.ticketforevents.com/3-giant-strategists/registration"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="animated-border px-15 py-4 text-l md:text-base text-white hover:bg-yellow-400 transition-all duration-300 inline-block text-center"
-            >
-              Book your Ticket
-            </a>
 
-            {/* Dropdown Icon with Bounce */}
+          {/* Call-to-Action Button with Dropdown Icon */}
+          {/* Call-to-Action Buttons - Equal Size */}
+          <div className="flex justify-center  gap-2 mt-4 ml-[-22px]">
+            {/* Button 1 */}
+        
+             <button onClick={() => scrollToSection('speaker')} className=" border-1  rounded-[25px] px-1 py-2 text-[15px] md:text-base    hover:bg-yellow-400 transition-all duration-300 inline-block text-center w-28 text-semibold">Speakers</button>
+
+            {/* Button 2 */}
+            <button onClick={() => scrollToSection('benefits')} className=" border-1 rounded-[25px] px-1 py-2 text-[15px] md:text-base   hover:bg-yellow-400 transition-all duration-300 inline-block text-center w-28 text-semibold">Benefits</button>
+
+            {/* Button 3 */}
+             <button onClick={() => scrollToSection('register')} className="animated-border  rounded-[25px] px-1 py-2 text-[15px] md:text-base   hover:bg-yellow-400 transition-all duration-300 inline-block text-center w-28 text-semibold">Register</button> 
+           
+          </div>
+
+          {/* Dropdown Icon */}
+          <div className="flex justify-center mt-2">
             <img
               src={dropdown}
               loading="lazy"
               alt="Dropdown Icon"
-              className="w-8 h-auto mt-2 animate-bounce"
+              className="w-8 h-auto animate-bounce"
             />
           </div>
+
         </div>
       </div>
     </main>

@@ -1,6 +1,7 @@
-import card1 from "../../assets/Card1.webp";
-import card2 from "../../assets/Card2.webp";
-import card3 from "../../assets/card3.webp"
+import card1 from "../../assets/card1.webp";
+import card2 from "../../assets/card2.webp";
+import card3 from "../../assets/card3.webp";
+
 
 const About = () => {
   return (

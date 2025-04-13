@@ -1,5 +1,7 @@
 import { lazy, Suspense, Fragment } from 'react';
 import { useParams } from 'react-router-dom';
+import LoadingAnimation from '../Components/LoadingAnimation/LoadingAnimation';
+
 
 const Landpage = lazy(() => import('../Components/Landpage/Landpage'));
 const About = lazy(() => import('../Components/About/About'));
@@ -11,12 +13,12 @@ const Mainpage = () => {
   const { name = "Guest" } = useParams(); // Get dynamic name from URL
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<LoadingAnimation/>}>
       <Fragment>
         <Landpage name={name} /> {/* Pass name as prop */}
         <About />
         <Speaker />
-        <Benifit />
+        <Benifit name={name}/>
         <Footer />
       </Fragment>
     </Suspense>
