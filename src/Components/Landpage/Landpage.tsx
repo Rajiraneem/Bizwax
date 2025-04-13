@@ -1,7 +1,7 @@
-import hero from '../../assets/heroimage .png';
-import bluerectangelebg from "../../assets/Bluerecatnglebg.png";
-import yellowbar from "../../assets/yellowbar.png";
-import dropdown from "../../assets/chevron-down.png";
+import hero from '../../assets/heroimage .webp';
+import bluerectangelebg from "../../assets/Bluerecatnglebg.webp";
+import yellowbar from "../../assets/yellowbar.webp";
+import dropdown from "../../assets/chevron-down.webp";
 import "../../index.css";
 
 type LandpageProps = {
@@ -16,6 +16,7 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
         {/* Hero Image */}
         <img
           src={hero}
+          loading='eager'
           alt="Speakers"
           className="z-10 relative max-w-full h-auto md:-mt-32 animate-fade-in"
         />
@@ -23,6 +24,7 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
         {/* Blue Background */}
         <img
           src={bluerectangelebg}
+          loading='eager'
           alt="Wave Background"
           className="w-full h-[40vh] -mt-[150px]"
         />
@@ -30,6 +32,7 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
         {/* Yellow Bar with Slide-In Animation */}
         <img
           src={yellowbar}
+          loading='eager'
           alt="Yellow Bar"
           className="absolute top-[51%] left-[4%] h-[157px] w-[3%] md:left-10 md:h-30 md:w-[1%] z-20 animate-slide-in-left"
         />
@@ -83,6 +86,7 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
             {/* Dropdown Icon with Bounce */}
             <img
               src={dropdown}
+              loading='eager'
               alt="Dropdown Icon"
               className="w-8 h-auto mt-2 animate-bounce"
             />
