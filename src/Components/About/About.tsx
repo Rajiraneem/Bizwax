@@ -1,3 +1,4 @@
+import { memo } from "react";
 import card1 from "../../assets/card1.webp";
 import card2 from "../../assets/card2.webp";
 import card3 from "../../assets/card3.webp";
@@ -25,7 +26,7 @@ Curated by Mission Means Consulting, this program is your opportunity to break f
           </div>
           {/* Card 2 */}
           <div className="">
-            <a href="https://maps.app.goo.gl/Kk21CS9ybzj3qamW6  "><img src={card2} alt=""  className='w-[300px]'/></a>
+            <a href="https://maps.app.goo.gl/Kk21CS9ybzj3qamW6  "><img src={card2} loading="lazy" alt=""  className='w-[300px]'/></a>
           </div>
 
           {/* Card 3 */}
@@ -38,4 +39,4 @@ Curated by Mission Means Consulting, this program is your opportunity to break f
   );
 };
 
-export default About;
+export default memo(About);

@@ -1,4 +1,4 @@
-import { lazy, Suspense, Fragment } from 'react';
+import { lazy, Suspense, Fragment, memo } from 'react';
 import { useParams } from 'react-router-dom';
 import LoadingAnimation from '../Components/LoadingAnimation/LoadingAnimation';
 
@@ -25,4 +25,4 @@ const Mainpage = () => {
   );
 };
 
-export default Mainpage;
+export default memo(Mainpage);

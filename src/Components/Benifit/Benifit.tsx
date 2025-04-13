@@ -1,3 +1,4 @@
+import { memo } from "react";
 import price1 from "../../assets/price1.webp"
 import price2 from "../../assets/price2.webp"
 type LandpageProps = {
@@ -37,7 +38,7 @@ const Benifit: React.FC<LandpageProps> = ({ name }) => {
         <div className="flex text-[40px]  mb-10" style={{ fontFamily: "ImpactCustom" }}>Choose Your Ticket</div>
         <div className="flex justify-center flex-col items-center relative w-[350px]">
           {/* First Image */}
-          <img src={price1} alt="" className="w-full rounded-xl" />
+          <img src={price1} loading="lazy" alt="" className="w-full rounded-xl" />
 
           {/* Centered Button Over Image */}
           <a
@@ -53,7 +54,7 @@ const Benifit: React.FC<LandpageProps> = ({ name }) => {
         </div>
         <div className="flex justify-center flex-col items-center relative w-[350px]">
           {/* First Image */}
-          <img src={price2} alt="" className="w-full rounded-xl mt-5" />
+          <img src={price2} loading="lazy" alt="" className="w-full rounded-xl mt-5" />
 
           {/* Centered Button Over Image */}
           <a
@@ -76,4 +77,4 @@ const Benifit: React.FC<LandpageProps> = ({ name }) => {
   );
 };
 
-export default Benifit;
+export default memo(Benifit);

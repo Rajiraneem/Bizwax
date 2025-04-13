@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useCallback, useState } from "react";
 import dropdown from "../../assets/chevron-down.webp";
 import frame1 from "../../assets/Frame 1.webp";
 import frame2 from "../../assets/Frame 2.webp";
@@ -60,9 +60,9 @@ const speakers = [
 const Speaker = () => {
    const [expanded, setExpanded] = useState<number | null>(null);
 
-   const toggleExpand = (id: number) => {
-      setExpanded(expanded === id ? null : id);
-   };
+   const toggleExpand = useCallback((id: number) => {
+      setExpanded((prev) => (prev === id ? null : id));
+   }, []);
 
    return (
       <section id="speaker" className="flex flex-col justify-center items-center mt-5 ">
@@ -143,4 +143,4 @@ const Speaker = () => {
    );
 };
 
-export default Speaker;
+export default memo(Speaker);

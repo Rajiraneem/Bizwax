@@ -1,5 +1,4 @@
-// src/Components/Loading/LoadingAnimation.jsx
-import React from 'react';
+import { memo } from 'react';
 import './LoadingAnimation.css'; // Styling in a separate CSS file
 
 const LoadingAnimation = () => {
@@ -11,4 +10,4 @@ const LoadingAnimation = () => {
   );
 };
 
-export default LoadingAnimation;
+export default memo(LoadingAnimation);

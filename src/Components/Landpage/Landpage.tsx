@@ -1,5 +1,5 @@
 import React, { useEffect, memo, useCallback } from 'react';
-import hero from '../../assets/heroimage .webp';
+import hero from '../../assets/heroimage.webp';
 import bluerectanglebg from "../../assets/Bluerecatnglebg.webp";
 import yellowbar from "../../assets/yellowbar.webp";
 import dropdown from "../../assets/chevron-down.webp";
