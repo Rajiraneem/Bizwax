@@ -1,9 +1,9 @@
 import { memo, useCallback, useState } from "react";
-import dropdown from "../../assets/chevron-down.webp";
-import frame1 from "../../assets/Frame 1.webp";
-import frame2 from "../../assets/Frame 2.webp";
-import frame3 from "../../assets/Frame 3.webp";
-import session from "../../assets/SESSION.webp";
+import dropdown from "@assets/chevron-down.webp";
+import frame1 from "@assets/Frame 1.webp";
+import frame2 from "@assets/Frame 2.webp";
+import frame3 from "@assets/Frame 3.webp";
+import session from "@assets/SESSION.webp";
 
 const speakers = [
   

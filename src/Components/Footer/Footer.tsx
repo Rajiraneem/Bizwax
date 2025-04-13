@@ -1,6 +1,6 @@
-import insta from "../../assets/ri_instagram-fill.webp"
-import facebook from "../../assets/ic_outline-facebook.webp"
-import linkedin from "../../assets/mdi_linkedin.webp"
+import insta from "@assets/ri_instagram-fill.webp"
+import facebook from "@assets/ic_outline-facebook.webp"
+import linkedin from "@assets/mdi_linkedin.webp"
 import { memo } from "react"
 const Footer = () => {
     return (

@@ -1,6 +1,6 @@
 import { memo } from "react";
-import price1 from "../../assets/price1.webp"
-import price2 from "../../assets/price2.webp"
+import price1 from "@assets/price1.webp"
+import price2 from "@assets/price2.webp"
 type LandpageProps = {
   name: string;
 };
