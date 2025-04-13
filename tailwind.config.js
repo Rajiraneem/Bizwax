@@ -1,5 +1,8 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx,css}",
+    "./index.html"
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -13,7 +16,10 @@ module.exports = {
         },
       },
       animation: {
-        float: 'float 1.5s ease-in-out infinite',
+        floating: 'customFloat 1.5s ease-in-out infinite','custom-float': 'customFloat 1.5s ease-in-out infinite',
+        borderAnimation: 'borderAnimation 15s ease-in-out infinite',
+        rotateDown: 'rotateDown 0.5s ease forwards',
+        rotateUp: 'rotateUp 0.5s ease forwards',
       },
     },
   },

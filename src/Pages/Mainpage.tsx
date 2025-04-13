@@ -1,14 +1,14 @@
-import { lazy, Suspense } from 'react';
-const Landpage = lazy(()=> import('../Components/Landpage/Landpage'));
-const About = lazy(()=> import('../Components/About/About'));
-import { Fragment } from 'react';
+import { lazy, Suspense, Fragment } from 'react';
+import { useParams } from 'react-router-dom';
+
+const Landpage = lazy(() => import('../Components/Landpage/Landpage'));
+const About = lazy(() => import('../Components/About/About'));
 const Speaker = lazy(() => import('../Components/Speakers/Speaker'));
 const Benifit = lazy(() => import('../Components/Benifit/Benifit'));
 const Footer = lazy(() => import('../Components/Footer/Footer'));
-import { useParams } from 'react-router-dom';
 
 const Mainpage = () => {
-  const { name = "Guest" } = useParams(); // Get the dynamic name from URL
+  const { name = "Guest" } = useParams(); // Get dynamic name from URL
 
   return (
     <Suspense fallback={<p>Loading...</p>}>
