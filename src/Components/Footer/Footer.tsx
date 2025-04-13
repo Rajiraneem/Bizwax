@@ -6,9 +6,9 @@ const Footer = () => {
         <section className='bg-white'>
             <div className='grid grid-cols-2 border-b-1 border-[#254c6a]'>
                 <div className='p-4'>
-                    <h2 className='font-[poppins] text-[20px] font-bold mb-2'>Get In Touch</h2>
-                    <h3 className='font-[poppins] text-[15px] font-semibold'>91-8129733687</h3>
-                    <h3 className='font-[poppins] text-[15px] font-semibold'>966-592336275</h3>
+                    <h2 className='font-[poppins] text-[15px] font-extrabold mb-2'>Contact For More</h2>
+                    <h3 className='font-[poppins] text-[13px] font-semibold'>91-8129733687</h3>
+                    <h3 className='font-[poppins] text-[13px] font-semibold'>966-592336275</h3>
                 </div>
                 <div className="flex overflow-hidden mt-[58px] justify-evenly ">
                     <a href="https://www.instagram.com/missionmeansprojects/"> <img src={insta} alt="" className=" w-[35px] h-[35px]" /></a>

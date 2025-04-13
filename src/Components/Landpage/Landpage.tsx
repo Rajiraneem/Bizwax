@@ -36,8 +36,7 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
 
         {/* Text Content */}
         <div
-          className="absolute top-[50%] left-[10%] md:left-[80px] z-50 text-white animate-fade-up delay-300"
-        >
+          className="absolute top-[50%] left-[10%] md:left-[80px] z-50 text-white animate-fade-up delay-300" >
           {/* Event Title */}
           <p className="text-[20px] font-[poppins] md:text-sm font-bold mb">
             BIZWAX 2025

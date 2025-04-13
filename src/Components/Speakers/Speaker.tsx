@@ -65,7 +65,8 @@ const Speaker = () => {
    return (
       <section className="flex flex-col justify-center items-center mt-5 ">
          <div className="mt-4" style={{ fontFamily: "ImpactCustom" }}>
-            <h1 className="text-[#204866] text-[45px]">Our Speakers</h1>
+            <h1 className="text-[#204866] text-[45px]">
+                  Speakers</h1>
          </div>
 
          <div className="grid grid-rows-3 gap-6 mt-6">
