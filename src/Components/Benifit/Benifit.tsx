@@ -1,10 +1,48 @@
-import { memo } from "react";
+import { memo, useCallback } from "react";
 import price1 from "@assets/price1.webp"
 import price2 from "@assets/price2.webp"
 type LandpageProps = {
   name: string;
 };
 const Benifit: React.FC<LandpageProps> = ({ name }) => {
+  // Function to track button clicks and send data to the analytics API
+  // buttonType parameter identifies which ticket type was clicked (standard or vip)
+  const trackButtonClick = useCallback((buttonType: string) => {
+    try {
+      console.log(`Tracking ${buttonType} ticket button click`);
+      // Send tracking data to the API
+      fetch('http://127.0.0.1:8000/api/button-clicks/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        mode: 'cors',
+        body: JSON.stringify({
+          button_id: `ticket-${buttonType}`,
+          button_text: `Book your Ticket (${buttonType})`,
+          page_url: window.location.href,
+          button_class: 'book-ticket-btn'
+        }),
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        console.log('Button click tracked successfully');
+        return response.json();
+      })
+      .then(data => {
+        console.log('Response data:', data);
+      })
+      .catch(error => {
+        console.error('Error tracking button click:', error);
+      });
+    } catch (error) {
+      console.error('Error in trackButtonClick:', error);
+    }
+  }, []);
+
   const benefits = [
     " Gain access to high-value networking with 500+ business leaders",
     "  Equip yourself with tools to thrive in unpredictable business landscapes",
@@ -47,7 +85,10 @@ const Benifit: React.FC<LandpageProps> = ({ name }) => {
             rel=""
             className="absolute inset-0 flex items-center justify-center"
           >
-            <button className="bg-[#204967] text-white border border-white px-10 py-3 rounded-full hover:bg-[#1a2f44] transition-all mt-[420px]">
+            <button
+              className="bg-[#204967] text-white border border-white px-10 py-3 rounded-full hover:bg-[#1a2f44] transition-all mt-[420px]"
+              onClick={() => trackButtonClick('standard')}
+            >
               Book your Ticket
             </button>
           </a>
@@ -63,7 +104,10 @@ const Benifit: React.FC<LandpageProps> = ({ name }) => {
             rel=""
             className="absolute inset-0 flex items-center justify-center"
           >
-            <button className="bg-[#204967] text-white border border-white px-10 py-3 rounded-full hover:bg-[#1a2f44] transition-all mt-[420px]">
+            <button
+              className="bg-[#204967] text-white border border-white px-10 py-3 rounded-full hover:bg-[#1a2f44] transition-all mt-[420px]"
+              onClick={() => trackButtonClick('vip')}
+            >
               Book your Ticket
             </button>
           </a>
