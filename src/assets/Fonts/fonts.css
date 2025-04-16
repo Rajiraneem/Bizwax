@@ -2,17 +2,19 @@
 
 /* ✅ Load your custom font first */
 @font-face {
-    font-family: 'ImpactCustom';
-    src: url('./impact.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'BauhausCustom';
-    src: url('./BauhausRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-display: swap;
+  font-family: 'ImpactCustom';
+  src: url('./impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BauhausCustom';
+  font-display: swap;
+  src: url('./BauhausRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
   
   /* ✅ Import Tailwind AFTER custom fonts */
 
