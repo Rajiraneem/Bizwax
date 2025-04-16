@@ -11,7 +11,7 @@ const Benifit: React.FC<LandpageProps> = ({ name }) => {
     try {
       console.log(`Tracking ${buttonType} ticket button click`);
       // Send tracking data to the API
-      fetch('https://bizwax.invitechai.com/button-clicks/', {
+      fetch('https://bizwax.invitechai.com/api/button-clicks/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
