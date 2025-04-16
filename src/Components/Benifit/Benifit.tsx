@@ -11,7 +11,7 @@ const Benifit: React.FC<LandpageProps> = ({ name }) => {
     try {
       console.log(`Tracking ${buttonType} ticket button click`);
       // Send tracking data to the API
-      fetch('/api/button-clicks/', {
+      fetch('http://94.136.185.170:8101/api/button-clicks/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
