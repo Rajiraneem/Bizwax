@@ -28,6 +28,14 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
     }
   },[]);
 
+  // Calculate font size based on name length
+  const getNameFontSize = () => {
+    if (name && name.length > 10) {
+      return "text-[30px] md:text-lg"; // Smaller text for long names
+    }
+    return "text-[40px] md:text-xl"; // Default size for shorter names
+  };
+
   return (
     <main className="bg-white w-full overflow-hidden">
       {/* Hero Section */}
@@ -73,10 +81,10 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
             </h1>
           </div>
 
-          {/* Subheading */}
+          {/* Subheading - Dynamic font size based on name length */}
           <div className="mb-1 mt-2">
             <h2
-              className="text-[#ffd325] text-[40px] md:text-xl ml-[-22px]"
+              className={`text-[#ffd325] ${getNameFontSize()} ml-[-22px]`}
               style={{ fontFamily: 'ImpactCustom' }}
             >
               Hi, {name}
@@ -91,21 +99,19 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
 
           {/* Call-to-Action Button with Dropdown Icon */}
           {/* Call-to-Action Buttons - Equal Size */}
-          <div className="flex justify-center  gap-2 mt-4 ml-[-22px]">
+          <div className="flex justify-center gap-2 mt-4 ml-[-22px]">
             {/* Button 1 */}
-        
-             <button onClick={() => scrollToSection('speaker')} className=" border-1  rounded-[25px] px-1 py-2 text-[15px] md:text-base    hover:bg-yellow-400 transition-all duration-300 inline-block text-center w-28 text-semibold">Speakers</button>
+            <button onClick={() => scrollToSection('speaker')} className="border-1 rounded-[25px] px-1 py-2 text-[15px] md:text-base hover:bg-yellow-400 transition-all duration-300 inline-block text-center w-28 text-semibold">Speakers</button>
 
             {/* Button 2 */}
-            <button onClick={() => scrollToSection('benefits')} className=" border-1 rounded-[25px] px-1 py-2 text-[15px] md:text-base   hover:bg-yellow-400 transition-all duration-300 inline-block text-center w-28 text-semibold">Benefits</button>
+            <button onClick={() => scrollToSection('benefits')} className="border-1 rounded-[25px] px-1 py-2 text-[15px] md:text-base hover:bg-yellow-400 transition-all duration-300 inline-block text-center w-28 text-semibold">Benefits</button>
 
             {/* Button 3 */}
-             <button onClick={() => scrollToSection('register')} className="animated-border  rounded-[25px] px-1 py-2 text-[15px] md:text-base   hover:bg-yellow-400 transition-all duration-300 inline-block text-center w-28 text-semibold">Register</button> 
-           
+            <button onClick={() => scrollToSection('register')} className="animated-border rounded-[25px] px-1 py-2 text-[15px] md:text-base hover:bg-yellow-400 transition-all duration-300 inline-block text-center w-28 text-semibold">Register</button> 
           </div>
 
           {/* Dropdown Icon */}
-          <div className="flex justify-center mt-2">
+          <div className="flex  ml-38 mt-2">
             <img
               src={dropdown}
               loading="lazy"
@@ -113,7 +119,6 @@ const Landpage: React.FC<LandpageProps> = ({ name }) => {
               className="w-8 h-auto animate-bounce"
             />
           </div>
-
         </div>
       </div>
     </main>
