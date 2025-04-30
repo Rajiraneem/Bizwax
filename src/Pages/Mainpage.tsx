@@ -20,8 +20,8 @@ const Mainpage = () => {
   
       const payload = {
         phone_number: customer_number,
-        body: "hi",
-        button_text: "Book My Spot!"
+        body: "Visited website",
+        button_text: "Book My Spot! (bizwax)"
       };
   
       fetch("https://bizwax.invitechai.com/webhook/bizwax", {
