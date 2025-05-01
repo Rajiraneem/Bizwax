@@ -87,7 +87,7 @@ const Benifit: React.FC<LandpageProps> = ({ name }) => {
           >
             <button
               className="bg-[#204967] text-white border border-white px-10 py-3 rounded-full hover:bg-[#1a2f44] transition-all mt-[420px]"
-              onClick={() => trackButtonClick('standard')}
+              onClick={() => trackButtonClick('vip')}
             >
               Book your Ticket
             </button>
@@ -106,7 +106,7 @@ const Benifit: React.FC<LandpageProps> = ({ name }) => {
           >
             <button
               className="bg-[#204967] text-white border border-white px-10 py-3 rounded-full hover:bg-[#1a2f44] transition-all mt-[420px]"
-              onClick={() => trackButtonClick('vip')}
+              onClick={() => trackButtonClick('standard')}
             >
               Book your Ticket
             </button>
