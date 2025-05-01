@@ -1,6 +1,6 @@
 import { memo, useCallback } from "react";
-import price1 from "@assets/price1.webp"
-import price2 from "@assets/price2.webp"
+import price1 from "@assets/discount1.png"
+import price2 from "@assets/discount2.png"
 type LandpageProps = {
   name: string;
 };
